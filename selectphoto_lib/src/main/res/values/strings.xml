@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SelectPhotoLibrary</string>
+
+    <string name="no_sd">设备没有SD卡！</string>
+    <string name="podsShipTime">装船时间: </string>
+    <string name="you_have_deny">您已经拒绝过一次</string>
+    <string name="more_five_pic">最多上传%1$d张图片</string>
+    <string name="please_open_camera">请允许打开相机！</string>
+    <string name="please_open_sd">请允许打操作SDCard！</string>
+
+    <string name="take_camera">拍摄</string>
+    <string name="select_photo">从相册获取</string>
+    <string name="title_empty"></string>
+
+</resources>

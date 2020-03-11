@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- GridView分割线颜色
+    如果分割线颜色只是一种的话，就是使用这个
+    -->
+    <solid android:color="#fafafa" />
+
+    <!-- 分割线颜色是3种 开始颜色 中间颜色 最后颜色-->
+    <!--    <gradient android:startColor="@color/colorPrimary"-->
+    <!--        android:centerColor="@color/bg"-->
+    <!--        android:endColor="@color/colorAccent"-->
+    <!--        />-->
+    <size
+        android:width="5dp"
+        android:height="5dp" />
+</shape>

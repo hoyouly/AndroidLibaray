@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <com.dc.top.customview.TitleBar
+        android:id="@+id/com_title"
+        app:bl_gradient_angle="0"
+        app:bl_gradient_endColor="#2661f5"
+        app:bl_gradient_startColor="#5692f7"
+        app:bl_gradient_centerColor="#3f7bf6"
+        android:background="@color/RGB_FFFFFF"
+        android:layout_width="match_parent"
+        android:paddingTop="24dp"
+        android:layout_height="80dp" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/colorPrimary" />
+
+</LinearLayout>
+
+

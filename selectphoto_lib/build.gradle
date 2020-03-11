@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api 'com.android.support:appcompat-v7:28.0.0'
+    api 'com.android.support:support-v4:28.0.0'
+    api 'com.zhouyou:easyrecyclerview:1.0.6'
+    api 'com.android.support:appcompat-v7:28.0.0'
+    api 'com.android.support:support-v4:28.0.0'
+    api 'com.android.support:recyclerview-v7:28.0.0'
+    api 'com.android.support:design:28.0.0'
+    api 'com.android.support.constraint:constraint-layout:2.0.0-beta4'
+    api 'org.xutils:xutils:3.8.3'
+
+}
+
+
+//添加这一行，告诉gradle应用到项目中
+apply plugin: 'maven'
+//配置模块未本地Maven仓库
+uploadArchives{
+    repositories.mavenDeployer{
+        // 配置本地仓库路径，这里是项目的根目录下的maven目录中
+        repository(url: uri('/Users/hoyouly/llll/maven-repository/'))
+        // 发布到maven的相关信息
+        pom.groupId = 'com.dc.selectphoto'// 项目包名
+        pom.artifactId = 'selectphoto_lib'// 库名
+        pom.version = '0.0.6'// 版本号
+    }
+}

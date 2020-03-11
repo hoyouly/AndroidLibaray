@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- app:indicatorColor="your color" -->
+<com.wang.avi.AVLoadingIndicatorView
+    android:id="@+id/avi"
+    android:visibility="visible"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/AVLoadingIndicatorView.Small"
+    app:indicatorName="BallSpinFadeLoaderIndicator"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"/>

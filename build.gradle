@@ -1,0 +1,47 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {//是 gradle构建项目时需要的插件的maven仓库
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        google()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.0'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-SNAPSHOT'
+
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {//项目依赖库的仓库配置
+        jcenter()
+
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven {
+            url 'https://jitpack.io'
+
+        }
+        maven {
+//            url 'https://raw.github.com/hoyouly/maven-repository/master'
+            url 'file:///Users/hoyouly/llll/maven-repository'
+        }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
