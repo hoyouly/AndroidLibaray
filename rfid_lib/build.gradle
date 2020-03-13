@@ -36,8 +36,8 @@ uploadArchives{
         // 配置本地仓库路径，这里是项目的根目录下的maven目录中
         repository(url: uri('/Users/hoyouly/llll/maven-repository/'))
         // 发布到maven的相关信息
-        pom.groupId = 'com.dc.rfid'// 项目包名
+        pom.groupId = 'com.dcg.rfid'// 项目包名
         pom.artifactId = 'rfid_lib'// 库名
-        pom.version = '0.0.2'// 版本号
+        pom.version = '0.0.1'// 版本号
     }
 }

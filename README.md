@@ -27,10 +27,10 @@ allprojects {
 
 ```java
 dependencies {
-    implementation 'com.dc.top:top_lib:0.0.2'
-    implementation 'com.dc.socket:socket_lib:0.0.2'
-    implementation 'com.dc.rfid:rfid_lib:0.0.2'
-    implementation 'com.dc.selectphoto:selectphoto_lib:0.0.2'
-    implementation 'com.dc.util:util_lib:0.0.2'
+    implementation 'com.dcg.top:top_lib:0.0.1'
+    implementation 'com.dcg.socket:socket_lib:0.0.1'
+    implementation 'com.dcg.rfid:rfid_lib:0.0.1'
+    implementation 'com.dcg.selectphoto:selectphoto_lib:0.0.1'
+    implementation 'com.dcg.util:util_lib:0.0.1'
 }
 ```

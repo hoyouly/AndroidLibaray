@@ -28,7 +28,7 @@ allprojects {
 
 ```java
 dependencies {
-    implementation 'com.dc.selectphoto:selectphoto_lib:0.0.2'
+    implementation 'com.dcg.selectphoto:selectphoto_lib:0.0.1'
 }
 ```
 

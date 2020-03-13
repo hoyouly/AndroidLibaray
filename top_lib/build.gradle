@@ -65,8 +65,8 @@ uploadArchives{
 //        }
         repository(url: uri('/Users/hoyouly/llll/maven-repository/'))
         // 发布到maven的相关信息
-        pom.groupId = 'com.dc.top'// 项目包名
+        pom.groupId = 'com.dcg.top'// 项目包名
         pom.artifactId = 'top_lib'// 库名
-        pom.version = '0.0.9'// 版本号
+        pom.version = '0.0.1'// 版本号
     }
 }

@@ -116,6 +116,6 @@ allprojects {
 
 ```java
 dependencies {
-    implementation 'com.dc.rfid:rfid_lib:0.0.2'
+    implementation 'com.dcg.rfid:rfid_lib:0.0.1'
 }
 ```

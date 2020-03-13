@@ -90,6 +90,6 @@ allprojects {
 
 ```java
 dependencies {
-    implementation 'com.dc.socket:socket_lib:0.0.2'
+    implementation 'com.dcg.socket:socket_lib:0.0.1'
 }
 ```

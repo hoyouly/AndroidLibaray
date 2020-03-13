@@ -38,6 +38,8 @@ dependencies {
     api 'com.android.support:design:28.0.0'
     api 'com.android.support.constraint:constraint-layout:2.0.0-beta4'
     api 'org.xutils:xutils:3.8.3'
+    implementation 'com.dcg.pic:pic_lib:0.0.1'
+
 
 }
 
@@ -50,8 +52,8 @@ uploadArchives{
         // 配置本地仓库路径，这里是项目的根目录下的maven目录中
         repository(url: uri('/Users/hoyouly/llll/maven-repository/'))
         // 发布到maven的相关信息
-        pom.groupId = 'com.dc.selectphoto'// 项目包名
+        pom.groupId = 'com.dcg.selectphoto'// 项目包名
         pom.artifactId = 'selectphoto_lib'// 库名
-        pom.version = '0.0.6'// 版本号
+        pom.version = '0.0.1'// 版本号
     }
 }

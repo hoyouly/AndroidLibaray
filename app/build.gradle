@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.dc.android"
+        applicationId "com.dcg.android"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
@@ -29,5 +29,5 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'com.dc.top:top_lib:0.0.2'
+    implementation 'com.dcg.top:top_lib:0.0.1'
 }

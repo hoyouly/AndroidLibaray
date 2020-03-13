@@ -7,7 +7,7 @@
     android:background="@color/common_bg"
     android:orientation="vertical">
 
-    <com.dc.top.customview.TitleBar
+    <com.dcg.top.customview.TitleBar
         android:id="@+id/com_title"
         app:bl_gradient_angle="0"
         app:bl_gradient_endColor="#2661f5"

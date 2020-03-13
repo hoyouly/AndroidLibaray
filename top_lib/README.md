@@ -40,6 +40,6 @@ allprojects {
 
 ```java
 dependencies {
-    implementation 'com.dc.top:top_lib:0.0.2'
+    implementation 'com.dcg.top:top_lib:0.0.1'
 }
 ```
