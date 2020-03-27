@@ -1,3 +1,7 @@
+自己编新的版本
+
+ gradle pic_lib:uploadArchives ; gradle util_lib:uploadArchives ;gradle top_lib:uploadArchives ;gradle uploadArchives
+
 # 使用步骤
 
 1. 在项目的根目录build.gradle 文件中 的添加下面的maven库

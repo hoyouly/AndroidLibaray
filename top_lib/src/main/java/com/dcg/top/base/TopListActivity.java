@@ -233,7 +233,6 @@ public abstract class TopListActivity<T, P extends TopMvpPresenter> extends TopM
 
     @Override
     public void loadData(List<T> datas, boolean hasMore) {
-        Log.e("hoyouly", "TopListActivity : " + "loadData() called with: datas = [" + datas + "], hasMore = [" + hasMore + "]");
         hideLoading();
         stopRefresh();
         if (currentPage == 1) {
