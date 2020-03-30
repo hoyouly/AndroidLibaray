@@ -264,9 +264,9 @@ public class SelectPhotoFragment extends Fragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        if (resultCode != RESULT_OK) {
-//            return;
-//        }
+        if (resultCode != -1) {
+            return;
+        }
         switch (requestCode) {
             //相机返回
             case CODE_CAMERA_REQUEST:

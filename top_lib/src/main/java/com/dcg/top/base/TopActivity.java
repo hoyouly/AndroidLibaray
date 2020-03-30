@@ -170,23 +170,7 @@ public abstract class TopActivity extends FragmentActivity implements View.OnCli
     }
 
     public void showToast(String message) {
-
-        TopApplication.UIHandler.post(() -> {
-//            if (this.isFinishing()) {
-//                return;
-//            }
-            try {
-                if (toast == null) {
-                    toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
-                    toast.show();
-                } else {
-                    toast.setText(message);
-                    toast.show();
-                }
-            } catch (Exception e) {
-                Log.e(TAG, e.getMessage());
-            }
-        });
+        runOnUiThread(() -> Toast.makeText(TopActivity.this, message, Toast.LENGTH_SHORT).show());
     }
 
 

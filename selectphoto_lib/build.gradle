@@ -54,6 +54,6 @@ uploadArchives{
         // 发布到maven的相关信息
         pom.groupId = 'com.dcg.selectphoto'// 项目包名
         pom.artifactId = 'selectphoto_lib'// 库名
-        pom.version = '0.0.1'// 版本号
+        pom.version = '0.0.2'// 版本号
     }
 }
