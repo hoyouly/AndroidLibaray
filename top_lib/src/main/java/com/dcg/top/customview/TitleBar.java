@@ -27,6 +27,8 @@ public class TitleBar extends ConstraintLayout {
     private TextView tvRightText;
 
     private ImageView ivSearch;
+    private ImageView ivBack;
+    private ImageView ivSetting;
 
 
     public TitleBar(Context context) {
@@ -58,6 +60,8 @@ public class TitleBar extends ConstraintLayout {
         mLlBack = (LinearLayout) findViewById(R.id.llBack);
         ivSearch = findViewById(R.id.iv_search);
         tvRightText = findViewById(R.id.tv_submit);
+        ivBack = findViewById(R.id.iv_back);
+        ivSetting = findViewById(R.id.iv_setting);
     }
 
 
@@ -83,6 +87,14 @@ public class TitleBar extends ConstraintLayout {
             case FLAG_SEARCH:
                 ivSearch.setImageResource(resId);
                 mllSearch.setVisibility(VISIBLE);
+                break;
+            case FLAG_BACK:
+                ivBack.setImageResource(resId);
+                mLlBack.setVisibility(VISIBLE);
+                break;
+            case FLAG_MENU:
+                ivSetting.setImageResource(resId);
+                mllSetting.setVisibility(VISIBLE);
                 break;
         }
     }
