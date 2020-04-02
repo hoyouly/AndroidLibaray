@@ -37,7 +37,8 @@ public class SelectPhotoFragment extends Fragment {
     private BaseAdapter mAdapter;
     private ArrayList<String> mLocalPicPathList;
     private static final String FRIST_PIC = "frist_pic";
-
+    //文件最大值
+    private static final int MAX_POST_SIZE = 10 * 1024 * 1024;
     private static final int CODE_GALLERY_REQUEST = 0xa0;
     private static final int CODE_CAMERA_REQUEST = 0xa1;
     private static final int CODE_PIC_REQUEST = 0xa2;
@@ -116,11 +117,11 @@ public class SelectPhotoFragment extends Fragment {
         xrv_review.setLayoutManager(layoutManager);
         mAdapter = new BaseAdapter<String>(getContext(), R.layout.edit_pic_item, mLocalPicPathList) {
             @Override
-            protected void convert(CommonViewHolder commonViewHolder, String bean, int index) {
+            protected void convert(CommonViewHolder holder, String bean, int index) {
                 if (FRIST_PIC.equals(bean)) {
-                    commonViewHolder.setImageResource(R.id.iv_pic, R.mipmap.icon_add_pic);
-                    commonViewHolder.itemView.setOnClickListener(v -> {
-                        if (mLocalPicPathList.size() == mMaxCount + 1) {
+                    holder.setImageResource(R.id.iv_pic, R.mipmap.icon_add_pic);
+                    holder.itemView.setOnClickListener(v -> {
+                        if (mMaxCount != -1 && mLocalPicPathList.size() == mMaxCount + 1) {
                             showToast(formatString(R.string.more_five_pic, mMaxCount));
                             return;
                         }
@@ -128,8 +129,8 @@ public class SelectPhotoFragment extends Fragment {
                         showSelectPicDialog();
                     });
                 } else {
-                    commonViewHolder.setLocalImage(R.id.iv_pic, bean);
-                    commonViewHolder.itemView.setOnClickListener(v -> {
+                    holder.setLocalImage(R.id.iv_pic, bean);
+                    holder.itemView.setOnClickListener(v -> {
                             if (cls != null) {
                                 Intent intent = new Intent(getContext(), cls);
                                 ArrayList<String> subList = new ArrayList<>();
@@ -278,6 +279,11 @@ public class SelectPhotoFragment extends Fragment {
             //相册返回
             case CODE_GALLERY_REQUEST:
                 String path = PhotoUtils.getPath(getContext(), data.getData());
+                File file = new File(path);
+                if (file.length() > MAX_POST_SIZE) {
+                    showToast("文件大小不能超过10M");
+                    return;
+                }
                 if (mLocalPicPathList.contains(path)) {
                     showToast("该照片已经被选中，请重新选。");
                 } else {

@@ -20,7 +20,6 @@ public abstract class TopMvpActivity<P extends TopMvpPresenter> extends TopActiv
     protected void initData(@Nullable Bundle savedInstanceState) {
         mPresent = setPresent();
         mPresent.attachView(this);
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
 

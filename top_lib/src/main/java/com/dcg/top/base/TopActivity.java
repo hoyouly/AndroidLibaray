@@ -50,6 +50,8 @@ public abstract class TopActivity extends FragmentActivity implements View.OnCli
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setStatusBarTransparent();
+        //处理 Android 软键盘挡住输入框
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         setContentView(R.layout.activity_top);
         mRootView = findViewById(R.id.root_view);
         mTitleBar = findViewById(R.id.com_title);
