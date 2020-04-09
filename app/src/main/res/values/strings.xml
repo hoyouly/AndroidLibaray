@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">android_lib</string>
+    <string name="app_name">AndroidLibaray</string>
+    <string name="hello">hello  ddddd 点击</string>
+    <string name="world">workd dddd  点击</string>
 </resources>
