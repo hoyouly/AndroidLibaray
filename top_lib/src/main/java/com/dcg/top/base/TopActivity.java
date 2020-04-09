@@ -56,8 +56,7 @@ public abstract class TopActivity extends FragmentActivity implements View.OnCli
         mRootView = findViewById(R.id.root_view);
         mTitleBar = findViewById(R.id.com_title);
         mLine = findViewById(R.id.line);
-        View contentView = LayoutInflater.from(TopActivity.this).inflate(getLayoutId(), null);
-        mRootView.addView(contentView, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        LayoutInflater.from(TopActivity.this).inflate(getLayoutId(), mRootView, true);
 
         mHandler = new MyHandler(this);
 
