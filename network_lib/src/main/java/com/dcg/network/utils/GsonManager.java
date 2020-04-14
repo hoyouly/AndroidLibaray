@@ -1,4 +1,4 @@
-package com.dcg.util;
+package com.dcg.network.utils;
 
 import com.google.gson.Gson;
 

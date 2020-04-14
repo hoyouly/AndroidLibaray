@@ -44,7 +44,6 @@ dependencies {
     api 'com.squareup.okhttp3:logging-interceptor:3.12.1'
 
     implementation 'io.netty:netty-all:4.1.44.Final'
-    implementation 'com.dcg.util:util_lib:0.0.1'
 }
 
 
@@ -58,6 +57,6 @@ uploadArchives {
         // 发布到maven的相关信息
         pom.groupId = 'com.dcg.network'// 项目包名
         pom.artifactId = 'network_lib'// 库名
-        pom.version = '0.0.1'// 版本号
+        pom.version = '0.0.2'// 版本号
     }
 }

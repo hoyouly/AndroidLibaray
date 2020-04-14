@@ -1,7 +1,7 @@
 package com.dcg.network.socket.netty;
 
 
-import com.dcg.util.GsonManager;
+import com.dcg.network.utils.GsonManager;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
