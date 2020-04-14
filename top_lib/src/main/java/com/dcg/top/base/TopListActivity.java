@@ -65,7 +65,7 @@ public abstract class TopListActivity<T, P extends TopMvpPresenter> extends TopM
         mEmptyView = findViewById(R.id.ll_no_data);
         mTvReturn = findViewById(R.id.tv_return);
         //
-        mRlBottom = findViewById(com.dcg.top.R.id.rl_bottom);
+        mRlBottom = findViewById(R.id.rl_bottom);
         int bottomLayout = getBottomLayout();
         if (bottomLayout > 0) {
             LayoutInflater.from(this).inflate(bottomLayout, mRlBottom, true);

@@ -3,7 +3,6 @@
     android:id="@+id/iv_pic"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:background="@drawable/app_selector_common"
     android:gravity="center"
     android:scaleType="fitXY"
     android:src="@mipmap/icon_add_pic" />
