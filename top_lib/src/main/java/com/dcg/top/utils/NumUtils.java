@@ -11,28 +11,39 @@ import java.util.regex.Pattern;
 public class NumUtils {
 
 
-    public static long parseLong(String text) {
-        if (text == null || text.isEmpty()) {
-            return 0L;
+    private static Pattern NUMBER_PATTERN = Pattern.compile("^[-\\+]?[\\d]*$");
+
+    public static boolean isNumber(String str) {
+        if (str == null) {
+            return false;
         }
-        try {
+        return NUMBER_PATTERN.matcher(str).matches();
+    }
+
+
+    public static long parseLong(String text) {
+        return parseLong(text, 0L);
+    }
+
+    public static long parseLong(String text, long defalutValue) {
+        if (isNumber(text)) {
             return Long.parseLong(text);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return 0L;
+        } else {
+            return defalutValue;
         }
     }
 
 
     public static int parseInt(String text) {
-        if (text == null || text.isEmpty()) {
-            return 0;
-        }
-        try {
+        return parseInt(text, 0);
+    }
+
+
+    public static int parseInt(String text, int defaultValue) {
+        if (isNumber(text)) {
             return Integer.parseInt(text);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return 0;
+        } else {
+            return defaultValue;
         }
     }
 
@@ -56,7 +67,7 @@ public class NumUtils {
      */
     public static boolean isShelfNoMatch(String text) {
         return isMatch("^\\d{2}[A-Z]\\d{2}[A-E]$", text)
-                || isMatch("(^\\d{4})$", text);
+            || isMatch("(^\\d{4})$", text);
     }
 
     /**
