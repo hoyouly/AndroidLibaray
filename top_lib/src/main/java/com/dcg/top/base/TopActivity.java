@@ -10,13 +10,15 @@ import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
-import android.view.*;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import com.dcg.top.R;
-import com.dcg.top.TopApplication;
 import com.dcg.top.customview.TitleBar;
 import com.dcg.top.utils.Utils;
 
@@ -53,6 +55,7 @@ public abstract class TopActivity extends FragmentActivity implements View.OnCli
         //处理 Android 软键盘挡住输入框
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         setContentView(R.layout.activity_top);
+        getWindow().setBackgroundDrawableResource(getDefaultWindowBackground());
         mRootView = findViewById(R.id.root_view);
         mTitleBar = findViewById(R.id.com_title);
         mLine = findViewById(R.id.line);
@@ -67,6 +70,15 @@ public abstract class TopActivity extends FragmentActivity implements View.OnCli
         initTitleBar();
         initView();
         initListener();
+    }
+
+    /**
+     * 设置默认的WindowBackground
+     *
+     * @return
+     */
+    public int getDefaultWindowBackground() {
+        return R.color.RGB_FFFFFF;
     }
 
     /**

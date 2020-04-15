@@ -60,25 +60,22 @@ public abstract class TopListActivity<T, P extends TopMvpPresenter> extends TopM
         } else {
             Log.d("hoyouly", "appBarLayout is null");
         }
-
         //无数据的时候的view
         mEmptyView = findViewById(R.id.ll_no_data);
-        mTvReturn = findViewById(R.id.tv_return);
-        //
         mRlBottom = findViewById(R.id.rl_bottom);
         int bottomLayout = getBottomLayout();
         if (bottomLayout > 0) {
             LayoutInflater.from(this).inflate(bottomLayout, mRlBottom, true);
         }
+        LayoutInflater.from(this).inflate(getEmptyViewLayout(), mEmptyView, true);
+        mTvReturn = findViewById(R.id.tv_return);
     }
 
     @Override
     protected void initView() {
         super.initView();
-
         initRecyclerView();
     }
-
 
     @Override
     protected void initData(@Nullable Bundle savedInstanceState) {
@@ -132,6 +129,16 @@ public abstract class TopListActivity<T, P extends TopMvpPresenter> extends TopM
      */
     protected int getBottomLayout() {
         return 0;
+    }
+
+
+    /**
+     * 无数据的时候显示的布局
+     *
+     * @return
+     */
+    protected int getEmptyViewLayout() {
+        return R.layout.layout_default_emptyview;
     }
 
     /**
@@ -279,7 +286,9 @@ public abstract class TopListActivity<T, P extends TopMvpPresenter> extends TopM
         if (isShow) {
             mEmptyView.setVisibility(View.VISIBLE);
             mRecyclerView.setVisibility(View.GONE);
-            mTvReturn.setOnClickListener(v -> finish());
+            if (mTvReturn != null) {
+                mTvReturn.setOnClickListener(v -> finish());
+            }
         } else {
             mRecyclerView.setVisibility(View.VISIBLE);
             mEmptyView.setVisibility(View.GONE);

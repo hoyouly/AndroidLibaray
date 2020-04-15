@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:bl_gradient_angle="0"
+    tools:ignore="MissingPrefix"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="暂无数据"
+        android:textColor="#7a7a7a"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tv_return"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="点击返回"
+        android:textColor="#7a7a7a"
+        android:textSize="16sp"
+        app:bl_corners_radius="2dp"
+        app:bl_shape="rectangle"
+        app:bl_solid_color="#ffffff"
+        app:bl_stroke_color="#e1e1e1"
+        app:bl_stroke_width="1dp" />
+</merge>
+
