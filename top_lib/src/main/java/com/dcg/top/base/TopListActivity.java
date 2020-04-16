@@ -248,6 +248,7 @@ public abstract class TopListActivity<T, P extends TopMvpPresenter> extends TopM
             } else {
                 showEmptyView(false);
                 updateList(datas);
+                mRecyclerView.smoothScrollToPosition(0);
             }
         } else {
             appendList(datas);
