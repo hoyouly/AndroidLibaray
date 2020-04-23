@@ -98,7 +98,7 @@ public class ApiRetrofit {
     private void creatRetrofit(Context context, int type, String baseUrl) {
         OkHttpClient.Builder httpClientBuilder = new OkHttpClient.Builder();
         httpClientBuilder
-            .cookieJar(new CookieManger(context.getApplicationContext()))
+            .cookieJar(new CookieManger(context))
 //            .addInterceptor(new HeadUrlInterceptor())
             .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
             .writeTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)

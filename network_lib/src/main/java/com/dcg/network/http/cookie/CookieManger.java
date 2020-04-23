@@ -17,12 +17,13 @@ import java.util.List;
  */
 
 public class CookieManger implements CookieJar {
-    private static Context mContext;
 
-    private static PersistentCookieStore cookieStore;
+    private Context mContext;
+
+    private PersistentCookieStore cookieStore;
 
     public CookieManger(Context context) {
-        mContext = context;
+        mContext = context.getApplicationContext();
         if (cookieStore == null) {
             cookieStore = new PersistentCookieStore(mContext);
         }
@@ -34,7 +35,7 @@ public class CookieManger implements CookieJar {
             for (Cookie item : cookies) {
                 cookieStore.add(url, item);
                 if (item.name() != null && !TextUtils.isEmpty(item.name()) &&
-                        item.value() != null && !TextUtils.isEmpty(item.value())) {
+                    item.value() != null && !TextUtils.isEmpty(item.value())) {
                     /*保存cookie到sp地方  可能会用到 */
 //                    PrefUtils.setString(mContext, "cookie_name", item.name());
 //                    PrefUtils.setString(mContext, "cookie_value", item.value());

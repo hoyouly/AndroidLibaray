@@ -52,6 +52,6 @@ uploadArchives {
         // 发布到maven的相关信息
         pom.groupId = 'com.dcg.network'// 项目包名
         pom.artifactId = 'network_lib'// 库名
-        pom.version = '0.0.3'// 版本号
+        pom.version = '0.0.4'// 版本号
     }
 }
