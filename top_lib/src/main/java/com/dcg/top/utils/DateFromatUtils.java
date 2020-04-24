@@ -28,4 +28,9 @@ public class DateFromatUtils {
         return strDate;
     }
 
+    public static String dateFormat(long time, String pattern) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+        String strDate = dateFormat.format(time);
+        return strDate;
+    }
 }

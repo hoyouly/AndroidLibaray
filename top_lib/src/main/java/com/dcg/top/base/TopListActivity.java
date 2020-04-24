@@ -14,9 +14,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.dcg.top.R;
+import com.dcg.top.utils.DensityUtil;
 import com.zhouyou.recyclerview.XRecyclerView;
 import com.zhouyou.recyclerview.divider.XHorizontalDividerItemDecoration;
-import org.xutils.common.util.DensityUtil;
 
 import java.util.ArrayList;
 import java.util.List;
