@@ -20,8 +20,7 @@ allprojects {
             url 'https://jitpack.io'
         }
         maven {
-//            url 'https://raw.github.com/hoyouly/maven-repository/master'
-            url 'file:///Users/hoyouly/llll/maven-repository'
+            url 'F:/AndroidProject/AndroidLibarayLocal'
         }
     }
 }

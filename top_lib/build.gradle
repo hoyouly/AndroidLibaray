@@ -63,7 +63,7 @@ uploadArchives{
 //            //nexus登录默认用户名和密码
 //            authentication(userName: "admin", password: "admin123")
 //        }
-        repository(url: uri('/Users/hoyouly/llll/maven-repository/'))
+        repository(url: uri('F:/AndroidProject/AndroidLibarayLocal'))
         // 发布到maven的相关信息
         pom.groupId = 'com.dcg.top'// 项目包名
         pom.artifactId = 'top_lib'// 库名

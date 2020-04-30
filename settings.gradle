@@ -1,2 +1,2 @@
-include ':app', ':top_lib', ':rfid_lib', ':selectphoto_lib', ':pic_lib', ':network_lib'
+include ':app', ':top_lib', ':rfid_lib', ':selectphoto_lib', ':pic_lib', ':network_lib', ':ruler_lib'
 rootProject.name='AndroidLibaray'
